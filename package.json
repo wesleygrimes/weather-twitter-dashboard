@@ -1,5 +1,5 @@
 {
-  "name": "angular-tweets-by-hashtag",
+  "name": "weather-twitter-dashboard",
   "version": "0.0.1",
   "scripts": {
     "ng": "ng",
