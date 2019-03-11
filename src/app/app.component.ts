@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { TwitterService } from './services';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-tweets-by-hashtag';
+  bearerToken$: Observable<string>;
+
+  constructor(private twitter: TwitterService) {
+    // this.bearerToken$ = this.twitter.getBearerToken();
+  }
 }
