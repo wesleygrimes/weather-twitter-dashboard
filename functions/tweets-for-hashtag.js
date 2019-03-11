@@ -21,6 +21,10 @@ exports.handler = async (event, context) => {
 
   return {
     statusCode: 200,
-    body: 'Works!'
+    body: {
+      TWITTER_API_BASEURL,
+      TWITTER_CONSUMER_KEY,
+      TWITTER_CONSUMER_SECRET
+    }
   };
 };
