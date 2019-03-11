@@ -1,9 +1,18 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="timeline col-md m-2 border bg-light">Timeline 1</div>
-    <div class="timeline col-md m-2 border bg-light">Timeline 2</div>
-    <div class="timeline col-md m-2 border bg-light">Timeline 3</div>
+    <div class="col"><h1>Tweets by Hashtag</h1></div>
+  </div>
+  <div class="row" *ngIf="(timelines$ | async) as timelines">
+    <div
+      class="timeline col-md m-2 border bg-light"
+      *ngFor="let timeline of timelines"
+    >
+      <h3>#{{ timeline.hashtag }}</h3>
+      <div *ngFor="let tweet of timeline.statuses" class="card m-2">
+        <div class="card-body">
+          {{ tweet.text }}
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-
-Bearer Token: {{ bearerToken$ | async }}

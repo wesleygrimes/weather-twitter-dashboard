@@ -1,1 +1,1 @@
-export { TwitterService } from './twitter.service';
+export { DataService } from './data.service';
