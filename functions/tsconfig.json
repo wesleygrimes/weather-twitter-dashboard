@@ -7,5 +7,5 @@
     "outFile": "../../built/local/tsc.js",
     "sourceMap": true
   },
-  "include": ["functions/**/*.ts"]
+  "include": ["*.ts"]
 }

@@ -1,4 +1,4 @@
 [build]
   functions = "lambda"
   command = "npm run build:prod"
-  publish = "dist/weather-twitter-dashboard"
+  publish = "build"

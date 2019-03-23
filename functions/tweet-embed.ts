@@ -1,10 +1,10 @@
-require('dotenv').config();
-
 import axios from 'axios';
 import { Tweet } from 'types/Tweet';
 import { LambdaEvent } from '../types/LambdaEvent';
 import { LambdaResponse } from '../types/LambdaResponse';
 import { RawTwitterResponse } from '../types/RawTwitterResponse';
+
+require('dotenv').config();
 
 const headers = {
   'Access-Control-Allow-Origin': '*',

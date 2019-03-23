@@ -1,9 +1,9 @@
-require('dotenv').config();
-
 import axios from 'axios';
 import { LambdaEvent } from '../types/LambdaEvent';
 import { LambdaResponse } from '../types/LambdaResponse';
 import { RawTwitterResponse } from '../types/RawTwitterResponse';
+
+require('dotenv').config();
 
 const {
   TWITTER_API_BASEURL,

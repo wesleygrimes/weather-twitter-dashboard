@@ -1,5 +1,5 @@
-import { Tweet } from 'types/Tweet';
-import { TweetMetadata } from 'types/TweetMetadata';
+import { Tweet } from '../types/Tweet';
+import { TweetMetadata } from '../types/TweetMetadata';
 
 export interface RawTwitterResponse {
   statuses: Tweet[];
