@@ -1,5 +1,5 @@
 import axios from 'axios';
-const baseApiUrl = `http://localhost:9000/.netlify/functions`;
+const baseApiUrl = process.env.REACT_APP_BASE_API_URL;
 
 async function getTweets(hashtag) {
   const result = await axios.get(`${baseApiUrl}/timeline`, {
