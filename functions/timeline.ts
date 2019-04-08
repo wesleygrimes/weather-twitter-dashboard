@@ -11,6 +11,8 @@ const {
   TWITTER_CONSUMER_SECRET
 } = process.env;
 
+console.log(TWITTER_API_BASEURL);
+
 const headers = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'Content-Type'
