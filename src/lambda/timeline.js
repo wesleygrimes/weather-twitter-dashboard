@@ -1,7 +1,4 @@
 import axios from 'axios';
-import { LambdaEvent } from '../types/LambdaEvent';
-import { LambdaResponse } from '../types/LambdaResponse';
-import { RawTwitterResponse } from '../types/RawTwitterResponse';
 
 require('dotenv').config();
 
@@ -18,12 +15,12 @@ const headers = {
   'Access-Control-Allow-Headers': 'Content-Type'
 };
 
-async function getBearerToken(): Promise<string> {
+async function getBearerToken() {
   const basicToken = Buffer.from(
     `${TWITTER_CONSUMER_KEY}:${TWITTER_CONSUMER_SECRET}`
   ).toString('base64');
 
-  const response = await axios.post<{ access_token: string }>(
+  const response = await axios.post(
     `${TWITTER_API_BASEURL}/oauth2/token`,
     'grant_type=client_credentials',
     {
@@ -37,11 +34,8 @@ async function getBearerToken(): Promise<string> {
   return response.data.access_token;
 }
 
-async function getTimelineForHashtag(
-  bearerToken: string,
-  hashtag: string
-): Promise<RawTwitterResponse> {
-  const response = await axios.get<RawTwitterResponse>(
+async function getTimelineForHashtag(bearerToken, hashtag) {
+  const response = await axios.get(
     `${TWITTER_API_BASEURL}/1.1/search/tweets.json`,
     {
       params: {
@@ -56,10 +50,7 @@ async function getTimelineForHashtag(
   return response.data;
 }
 
-export async function handler(
-  event: LambdaEvent,
-  context: any
-): Promise<LambdaResponse> {
+export async function handler(event, context) {
   try {
     const hashtag = event.queryStringParameters.hashtag || 'ncwx';
 

@@ -40,7 +40,11 @@ export function Timeline({ incomingHashtag }) {
       ) : (
         <h3>#{hashtag}</h3>
       )}
-      <button onClick={handleClick}>
+      <button
+        type="button"
+        className="btn btn-secondary btn-sm"
+        onClick={handleClick}
+      >
         {timeline.editMode ? 'save' : 'edit'}
       </button>
       <Loading isLoading={timeline.loading} />

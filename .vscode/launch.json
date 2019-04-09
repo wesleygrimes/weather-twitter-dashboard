@@ -16,6 +16,15 @@
       "sourceMapPathOverrides": {
         "webpack:///src/*": "${webRoot}/*"
       }
+    },
+    {
+      "name": "Debug",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceRoot}",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run-script", "serve:lambda"],
+      "port": 5858
     }
   ]
 }
