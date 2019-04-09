@@ -3,8 +3,6 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
-    "@babel/preset-typescript": "^7.3.3",
-    "aws-lambda": "^0.1.2",
     "axios": "^0.18.0",
     "babel-loader": "^8.0.5",
     "bootstrap": "^4.3.1",
@@ -47,5 +45,6 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
-  }
+  },
+  "proxy": "http://localhost:9000"
 }
